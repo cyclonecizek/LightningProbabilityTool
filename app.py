@@ -11,12 +11,12 @@ def main():
   st.header('Sounding Parameters')
   col1, col2 = st.columns(2)
   with col1:
-    Thompson_Index = st.slider('Thompson Index', 0.0, 60.0, 1.0)
-    RH = st.slider('700-500mb Average RH', 0.0, 100.0, 1.0)
+    Thompson_Index = st.number_input('Thompson Index (KI - LI)', 0.0, 60.0, step = 0.1)
+    RH = st.number_input('700-500mb Average RH', 0, 100, step=1)
   with col2:
     #wind_average = st.slider('1000-700mb Average U-Wind Component', -40.0, 40.0, 0.5)
-    wind_speed = st.slider('1000-700mb Average Wind Speed', 0.0, 50.0, 0.5)
-    wind_direction = st.slider('1000-700mb Average Wind Direction', 0.0, 360.0, 1.0)
+    wind_speed = st.number_input('1000-700mb Average Wind Speed', 0.0, 100.0, step= 0.1)
+    wind_direction = st.number_input('1000-700mb Average Wind Direction', 0, 360, step = 1)
 
   if st.button('Probability of Lightning'):
     #result = predict(np.array([[Thompson_Index, wind_average]]))

@@ -15,7 +15,7 @@ def main():
     RH = st.number_input('700-500mb Average RH', 0, 100, step=1)
   with col2:
     #wind_average = st.slider('1000-700mb Average U-Wind Component', -40.0, 40.0, 0.5)
-    wind_speed = st.number_input('1000-700mb Average Wind Speed', 0.0, 100.0, step= 0.1)
+    wind_speed = st.number_input('1000-700mb Average Wind Speed', 0.0, 100.0, step= 0.1, format= "%.1f" %)
     wind_direction = st.number_input('1000-700mb Average Wind Direction', 0, 360, step = 1)
 
   if st.button('Probability of Lightning'):

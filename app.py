@@ -11,7 +11,7 @@ def main():
   st.header('Sounding Parameters')
   col1, col2 = st.columns(2)
   with col1:
-    Thompson_Index = st.number_input('Thompson Index (KI - LI)', 0.0, 60.0, step = 0.1)
+    Thompson_Index = st.number_input('Thompson Index (KI - LI)', 0.0, 60.0, step = 0.1, format= "%.1f")
     RH = st.number_input('700-500mb Average RH', 0, 100, step=1)
   with col2:
     #wind_average = st.slider('1000-700mb Average U-Wind Component', -40.0, 40.0, 0.5)

@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from prediction import predict
+from prediction import predict, predict_limited
 
 def main():
 

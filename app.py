@@ -24,8 +24,14 @@ def main():
     wind_average = wind_speed * np.cos(np.deg2rad(270-wind_direction))
 
     result = predict(np.array([[Thompson_Index, wind_average, RH]]))
+    result_limited = predict_limited(np.array([[Thompson_Index, wind_average, RH]]))
     #result_str = str(int(result[0])) + '%'
+    st.header('Original Tool')
     st.header(str(int(result[0])) + '%')
+    st.header('Updated Tool')
+    st.header(str(int(result_limited[0])) + '%')
+
+
 
 if __name__=='__main__': 
     main()

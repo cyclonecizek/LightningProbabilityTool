@@ -26,9 +26,9 @@ def main():
     result = predict(np.array([[Thompson_Index, wind_average, RH]]))
     result_limited = predict_limited(np.array([[Thompson_Index, wind_average, RH]]))
     #result_str = str(int(result[0])) + '%'
-    st.header('Original Tool')
+    st.header('Version l.0')
     st.header(str(int(result[0])) + '%')
-    st.header('Updated Tool')
+    st.header('Version 2.0')
     st.header(str(int(result_limited[0])) + '%')
 
 

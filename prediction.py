@@ -20,4 +20,4 @@ def predict_15Z(data):
     clf_15Z = joblib.load("RFC_model_15Z.sav")
     prediction_15Z = clf_15Z.predict_proba(data)
     df_prob_15Z = pd.DataFrame(prediction_15Z)
-    return df_prob_limited[1]*100
+    return df_prob_15Z[1]*100

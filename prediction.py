@@ -21,3 +21,9 @@ def predict_15Z(data):
     prediction_15Z = clf_15Z.predict_proba(data)
     df_prob_15Z = pd.DataFrame(prediction_15Z)
     return df_prob_15Z[1]*100
+
+def predict_10Z_updated(data):
+    clf_10Z = joblib.load("RFC_model_limited_depth_10Z_updated.sav")
+    prediction_10Z = clf_10Z.predict_proba(data)
+    df_prob_10Z = pd.DataFrame(prediction_10Z)
+    return df_prob_10Z[1]*100

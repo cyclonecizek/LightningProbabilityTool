@@ -6,9 +6,9 @@ from prediction import predict, predict_limited, predict_15Z
 def main():
 
   st.title('Cape Canaveral Lightning Probability Tool')
-  st.markdown('Input parameters from 10Z KXMR sounding')
+  
 
-  st.header('Sounding Parameters')
+  st.header('Sounding Parameters from 10Z')
   col1, col2 = st.columns(2)
   with col1:
     Thompson_Index = st.number_input('Thompson Index (KI - LI)', -30.0, 60.0, step = 0.1, format= "%.1f")
@@ -33,9 +33,9 @@ def main():
 
 
 
-  st.markdown('Input parameters from 15Z KXMR sounding')
 
-  st.header('Sounding Parameters')
+
+  st.header('Sounding Parameters from 15Z')
   col3, col4 = st.columns(2)
   with col3:
     Thompson_Index_15Z = st.number_input('Thompson Index (KI - LI)', -30.0, 60.0, step = 0.1, format= "%.1f")

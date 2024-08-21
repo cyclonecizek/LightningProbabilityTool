@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from prediction import predict, predict_limited, predict_15Z
+from prediction import predict, predict_limited, predict_15Z, predict_10Z_updated
 
 def main():
 
@@ -23,13 +23,14 @@ def main():
 
     wind_average = wind_speed * np.cos(np.deg2rad(270-wind_direction))
 
-    result = predict(np.array([[Thompson_Index, wind_average, RH]]))
-    result_limited = predict_limited(np.array([[Thompson_Index, wind_average, RH]]))
+    #result = predict(np.array([[Thompson_Index, wind_average, RH]]))
+    #result_limited = predict_limited(np.array([[Thompson_Index, wind_average, RH]]))
     #result_str = str(int(result[0])) + '%'
-    st.header('Version 1.0')
-    st.header(str(int(result[0])) + '%')
-    st.header('Version 2.0')
-    st.header(str(int(result_limited[0])) + '%')
+    #st.header('Version 1.0')
+    #st.header(str(int(result[0])) + '%')
+    result_10Z = predict_10Z_updated(np.array([[Thompson_Index, wind_average, RH]]))  
+    st.header('Version 2.01')
+    st.header(str(int(result_10Z[0])) + '%')
 
 
 

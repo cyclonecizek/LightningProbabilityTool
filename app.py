@@ -50,7 +50,7 @@ def main():
     wind_average_15Z = wind_speed_15Z * np.cos(np.deg2rad(270-wind_direction_15Z))
     PWAT_mm = PWAT * 25.4
 
-    result_15Z = predict_15Z(np.array([[Thompson_Index, wind_average, PWAT_mm, RH]]))
+    result_15Z = predict_15Z(np.array([[Thompson_Index_15Z, wind_average_15Z, PWAT_mm, RH_15Z]]))
     #result_limited = predict_limited(np.array([[Thompson_Index, wind_average, RH]]))
     #result_str = str(int(result[0])) + '%'
     st.header('15Z Output')

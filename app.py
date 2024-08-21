@@ -38,13 +38,13 @@ def main():
   st.header('Sounding Parameters from 15Z')
   col3, col4 = st.columns(2)
   with col3:
-    Thompson_Index_15Z = st.number_input('Thompson Index (KI - LI)', -30.0, 60.0, step = 0.1, format= "%.1f")
-    RH_15Z = st.number_input('700-500mb Average RH', 0, 100, step=1)
+    Thompson_Index_15Z = st.number_input('15Z Thompson Index (KI - LI)', -30.0, 60.0, step = 0.1, format= "%.1f")
+    RH_15Z = st.number_input('15Z 700-500mb Average RH', 0, 100, step=1)
     PWAT = st.number_input('PWAT (inches)', 0.00, 5.00, step = 0.01, format = "%.01f")
   with col4:
-    #wind_average = st.slider('1000-700mb Average U-Wind Component', -40.0, 40.0, 0.5)
-    wind_direction_15Z = st.number_input('1000-700mb Average Wind Direction', 0, 360, step = 1)
-    wind_speed_15Z = st.number_input('1000-700mb Average Wind Speed in kts', 0.0, 100.0, step= 0.1, format= "%.1f")
+    #wind_average = st.slider('15Z 1000-700mb Average U-Wind Component', -40.0, 40.0, 0.5)
+    wind_direction_15Z = st.number_input('15Z 1000-700mb Average Wind Direction', 0, 360, step = 1)
+    wind_speed_15Z = st.number_input('15Z 1000-700mb Average Wind Speed in kts', 0.0, 100.0, step= 0.1, format= "%.1f")
   
   if st.button('Probability of Lightning 15Z'):
     wind_average_15Z = wind_speed_15Z * np.cos(np.deg2rad(270-wind_direction_15Z))

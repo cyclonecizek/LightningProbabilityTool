@@ -29,7 +29,7 @@ def main():
     #st.header('Version 1.0')
     #st.header(str(int(result[0])) + '%')
     result_10Z = predict_10Z_updated(np.array([[Thompson_Index, wind_average, RH]]))  
-    st.header('Version 2.01')
+    st.header('10Z Output (Version 2.0)')
     st.header(str(int(result_10Z[0])) + '%')
 
 
